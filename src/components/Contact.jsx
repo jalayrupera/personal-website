@@ -1,38 +1,44 @@
+import {
+  EMAIL,
+  GITHUB_URL,
+  LINKEDIN_URL,
+  PHONE_DISPLAY,
+  PHONE_HREF,
+  RESUME_FILE,
+} from '../data/profile';
+
 export default function Contact() {
   return (
     <footer id="contact" className="contact">
       <div className="container">
-        <div className="contact-headline">Open to new opportunities.</div>
+        <h2 className="contact-headline">
+          Open to backend and distributed-systems roles<span className="dot">.</span>
+        </h2>
         <p className="contact-copy">
-          Always up for discussing new roles, interesting projects, or a chat about backend systems
-          and technology.
+          Happy to talk about queue architecture, scaling async workloads, or anything running in
+          production at odd hours.
         </p>
 
-        <div className="contact-actions">
-          <a href="mailto:jalayrupera13@gmail.com" className="btn-contact-primary">
-            jalayrupera13@gmail.com
-          </a>
-          <a
-            href="https://github.com/jalayrupera"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-contact-secondary"
-          >
+        <a href={`mailto:${EMAIL}`} className="contact-email">
+          {EMAIL}
+        </a>
+
+        <div className="contact-links">
+          <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>
+          <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
             GitHub ↗
           </a>
-          <a
-            href="https://www.linkedin.com/in/jalay-rupera-b774b5131/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-contact-secondary"
-          >
+          <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
             LinkedIn ↗
+          </a>
+          <a href={RESUME_FILE} download>
+            Résumé ↓
           </a>
         </div>
 
-        <div className="contact-footer">
+        <div className="contact-foot">
           <span>© 2026 Jalay Rupera</span>
-          <span>Bangalore, India</span>
+          <span>Bangalore, India · UTC+5:30</span>
         </div>
       </div>
     </footer>

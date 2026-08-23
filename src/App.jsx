@@ -1,30 +1,30 @@
-import Starfield from './components/Starfield';
+import Galaxy from './components/Galaxy';
 import Nebula from './components/Nebula';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
-import Stats from './components/Stats';
+import Signal from './components/Signal';
 import NowStrip from './components/NowStrip';
 import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
+import Work from './components/Work';
+import Stack from './components/Stack';
 import Contact from './components/Contact';
 import './styles/components.css';
 
 function App() {
   return (
-    <div className="page-wrapper">
-      <Starfield />
+    <div className="page">
+      <Galaxy />
       <Nebula />
       <Nav />
       <main>
         <Hero />
-        <Stats />
+        <Signal />
         <NowStrip />
         <Experience />
-        <Projects />
-        <Skills />
-        <Contact />
+        <Work />
+        <Stack />
       </main>
+      <Contact />
     </div>
   );
 }

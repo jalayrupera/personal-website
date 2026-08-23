@@ -1,51 +1,42 @@
+import { EMAIL, GITHUB_URL, LINKEDIN_URL, RESUME_FILE } from '../data/profile';
+
 export default function Hero() {
   return (
     <header id="top" className="hero">
       <div className="container">
-        <div className="hero-kicker">Bangalore, India</div>
+        <div className="hero-kicker">Bangalore, IN · UTC+5:30</div>
+
         <h1 className="hero-name">
           Jalay
           <br />
-          Rupera
-          <span className="period">.</span>
+          Rupera<span className="dot">.</span>
         </h1>
 
-        <div className="hero-roles">
-          <div className="hero-role-primary">Full Stack Engineer · Ex-Founder</div>
-          <div className="hero-role-secondary">
-            Backend systems · automation pipelines · AI-powered tooling
-          </div>
+        <div className="hero-role">
+          <span>Backend Engineer</span>
+          <span className="hot">Distributed Systems</span>
+          <span>Python</span>
         </div>
 
-        <p className="hero-intro">
-          Results-driven engineer with <strong>4.5+ years</strong> in Python, FastAPI, Celery,
-          Redis, MongoDB and REST API development. Proven track record building scalable backend
-          systems, automating complex workflows, and integrating AI/LLM-powered modules — with{' '}
-          <strong>startup-style ownership</strong>.
+        <p className="hero-thesis">
+          I build and operate the asynchronous Python systems behind{' '}
+          <b>344,000</b> patient eligibility checks a week.
         </p>
 
         <div className="hero-actions">
-          <a
-            href="Jalay Rupera - Resume.pdf"
-            download
-            className="btn btn-primary"
-          >
-            Download résumé ↓
+          <a href={RESUME_FILE} download className="btn btn-fill">
+            Résumé ↓
           </a>
-          <a
-            href="https://github.com/jalayrupera"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-secondary"
-          >
+          <a href={`mailto:${EMAIL}`} className="btn btn-ghost">
+            Email
+          </a>
+        </div>
+
+        <div className="hero-social">
+          <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
             GitHub ↗
           </a>
-          <a
-            href="https://www.linkedin.com/in/jalay-rupera-b774b5131/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-secondary"
-          >
+          <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
             LinkedIn ↗
           </a>
         </div>

@@ -1,17 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap');
-
 :root {
-  --ground: #04050a;
-  --text-primary: #eceef4;
-  --text-secondary: #a9adc0;
-  --text-muted: #666b80;
-  --hairline: #23263a;
-  --accent: #ec3013;
-  --accent-pressed: #c92408;
-  --accent-tint: rgba(236, 48, 19, 0.06);
-  --selection: rgba(236, 48, 19, 0.4);
-  --container: 1160px;
-  --side-pad: 32px;
+  /* ground */
+  --void: #04050a;
+  --deep: #0a0c15;
+  --raise: #10131f;
+  --line: #1a1e2e;
+  --line-lift: #262b3e;
+
+  /* ink */
+  --text: #edeff5;
+  --dim: #a2a8c0;
+  --faint: #8a91ac;
+
+  /* signal */
+  --signal: #ec3013;
+  --signal-pressed: #c92408;
+  --lift: #ff6a45;
+
+  --selection: rgba(236, 48, 19, 0.35);
+
+  --container: 1120px;
+  --side-pad: 28px;
+
+  --sans: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
 * {
@@ -25,10 +36,11 @@ html {
 }
 
 body {
-  font-family: 'Archivo', sans-serif;
-  background-color: var(--ground);
-  color: var(--text-primary);
-  line-height: 1.6;
+  font-family: var(--sans);
+  background-color: var(--void);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -39,18 +51,16 @@ body {
 }
 
 a {
-  color: var(--text-primary);
+  color: inherit;
   text-decoration: none;
-  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
 }
 
-a:hover {
-  color: var(--accent);
-}
-
-a:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--lift);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
 img {
@@ -60,26 +70,6 @@ img {
 
 ul {
   list-style: none;
-}
-
-@keyframes drift {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 480px 320px;
-  }
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -97,17 +87,18 @@ ul {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 9px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--ground);
+  background: var(--void);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--hairline);
+  background: var(--line);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-muted);
+  background: var(--faint);
 }
