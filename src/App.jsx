@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import Galaxy from './components/Galaxy';
 import Nebula from './components/Nebula';
 import Nav from './components/Nav';
@@ -8,9 +10,15 @@ import Experience from './components/Experience';
 import Work from './components/Work';
 import Stack from './components/Stack';
 import Contact from './components/Contact';
+import { initAnalytics, trackLinkClicks } from './lib/analytics';
 import './styles/components.css';
 
 function App() {
+  useEffect(() => {
+    initAnalytics();
+    return trackLinkClicks();
+  }, []);
+
   return (
     <div className="page">
       <Galaxy />
