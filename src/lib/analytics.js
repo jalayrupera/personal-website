@@ -6,7 +6,7 @@
    when no ID is configured, so analytics can never break the page. */
 
 /* Paste the GA4 measurement ID here, e.g. 'G-ABC123XYZ'. Empty = disabled. */
-export const MEASUREMENT_ID = 'G-YD8V4W98T6';
+export const MEASUREMENT_ID = 'G-3H29WHED7W';
 
 const configured = /^G-[A-Z0-9]{4,}$/i.test(MEASUREMENT_ID);
 
