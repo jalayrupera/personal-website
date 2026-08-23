@@ -7,16 +7,16 @@ const projects = [
     entity: 'Mantys',
     metric: '344K+ checks / wk',
     description:
-      'Both halves of one product. A TypeScript Chrome extension sits in the hospital information system at the front desk, verifying coverage by Emirates ID, Member ID, or DHA ID and filling forms in place; behind it, FastAPI services, partitioned Celery pipelines, and LLM transformation workflows carry 344K+ checks a week for 50+ hospitals and clinics across the UAE.',
+      'Both halves of one product. FastAPI services, partitioned Celery pipelines, and LLM transformation workflows carry 344K+ checks a week for 50+ hospitals and clinics across the UAE; sitting on top of them, a TypeScript Chrome extension runs inside the hospital information system at the front desk, verifying coverage by Emirates ID, Member ID, or DHA ID and filling forms in place.',
     stack: [
-      'typescript',
-      'chrome mv3',
       'fastapi',
       'celery',
       'redis',
       'rabbitmq',
       'kubernetes',
       'azure-openai',
+      'typescript',
+      'chrome mv3',
     ],
   },
   {

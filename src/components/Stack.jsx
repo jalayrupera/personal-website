@@ -3,18 +3,6 @@ import Reveal from './Reveal';
 const groups = [
   { name: 'Languages', items: ['python', 'typescript', 'javascript', 'sql', 'bash'] },
   {
-    name: 'Frontend',
-    items: [
-      'react',
-      'next.js',
-      'tailwind',
-      'chrome extensions',
-      'manifest v3',
-      'html/css',
-      'responsive ui',
-    ],
-  },
-  {
     name: 'Backend',
     items: ['fastapi', 'rest api design', 'microservices', 'async programming', 'system design'],
   },
@@ -34,6 +22,17 @@ const groups = [
   {
     name: 'Infrastructure',
     items: ['docker', 'kubernetes', 'k3s', 'azure', 'aws', 'ci/cd', 'linux', 'observability'],
+  },
+  {
+    name: 'Frontend',
+    items: [
+      'react',
+      'tailwind',
+      'chrome extensions',
+      'manifest v3',
+      'html/css',
+      'responsive ui',
+    ],
   },
   {
     name: 'AI / LLM',
