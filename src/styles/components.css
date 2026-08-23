@@ -263,7 +263,7 @@ main,
   font-size: clamp(17px, 2.2vw, 19.5px);
   line-height: 1.55;
   color: var(--dim);
-  max-width: 30ch;
+  max-width: 34ch;
   margin-top: 24px;
 }
 
@@ -910,6 +910,7 @@ main,
 
   .hero-kicker,
   .hero-role,
+  .work-note,
   .section-label,
   .exp-when,
   .exp-where,
@@ -960,4 +961,24 @@ main,
   a {
     color: #000 !important;
   }
+}
+
+/* Footnote under the work grid: this site is itself the frontend sample. */
+.work-note {
+  margin-top: 24px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--faint);
+}
+
+.work-note a {
+  color: var(--dim);
+  border-bottom: 1px solid var(--line-lift);
+  padding-bottom: 1px;
+}
+
+.work-note a:hover {
+  color: var(--lift);
+  border-bottom-color: var(--signal);
 }

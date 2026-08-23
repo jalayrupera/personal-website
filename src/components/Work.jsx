@@ -1,4 +1,5 @@
 import Reveal from './Reveal';
+import { SITE_REPO_URL } from '../data/profile';
 
 const projects = [
   {
@@ -6,8 +7,17 @@ const projects = [
     entity: 'Mantys',
     metric: '344K+ checks / wk',
     description:
-      'End-to-end eligibility system used by 50+ hospitals and clinics across the UAE — a Chrome extension at the front desk backed by FastAPI services, Celery retrieval pipelines, and LLM transformation workflows. Real-time coverage verification via Emirates ID, Member ID, or DHA ID, wired into hospital information systems.',
-    stack: ['fastapi', 'celery', 'redis', 'rabbitmq', 'kubernetes', 'azure-openai', 'playwright'],
+      'Both halves of one product. A TypeScript Chrome extension sits in the hospital information system at the front desk, verifying coverage by Emirates ID, Member ID, or DHA ID and filling forms in place; behind it, FastAPI services, partitioned Celery pipelines, and LLM transformation workflows carry 344K+ checks a week for 50+ hospitals and clinics across the UAE.',
+    stack: [
+      'typescript',
+      'chrome mv3',
+      'fastapi',
+      'celery',
+      'redis',
+      'rabbitmq',
+      'kubernetes',
+      'azure-openai',
+    ],
   },
   {
     name: 'Drishti — Autonomous Drone System',
@@ -52,6 +62,13 @@ export default function Work() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={0.3} as="p" className="work-note">
+          This site — React and Vite, with the galaxy hand-written on a canvas.{' '}
+          <a href={SITE_REPO_URL} target="_blank" rel="noopener noreferrer">
+            Source ↗
+          </a>
+        </Reveal>
       </div>
     </section>
   );

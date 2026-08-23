@@ -12,11 +12,11 @@ export default function Contact() {
     <footer id="contact" className="contact">
       <div className="container">
         <h2 className="contact-headline">
-          Open to backend and distributed-systems roles<span className="dot">.</span>
+          Open to full-stack and distributed-systems roles<span className="dot">.</span>
         </h2>
         <p className="contact-copy">
-          Happy to talk about queue architecture, scaling async workloads, or anything running in
-          production at odd hours.
+          Happy to talk about queue architecture, scaling async workloads, or the interfaces that
+          sit in front of them.
         </p>
 
         <a href={`mailto:${EMAIL}`} className="contact-email">

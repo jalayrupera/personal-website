@@ -1,7 +1,19 @@
 import Reveal from './Reveal';
 
 const groups = [
-  { name: 'Languages', items: ['python', 'typescript', 'sql', 'bash'] },
+  { name: 'Languages', items: ['python', 'typescript', 'javascript', 'sql', 'bash'] },
+  {
+    name: 'Frontend',
+    items: [
+      'react',
+      'next.js',
+      'tailwind',
+      'chrome extensions',
+      'manifest v3',
+      'html/css',
+      'responsive ui',
+    ],
+  },
   {
     name: 'Backend',
     items: ['fastapi', 'rest api design', 'microservices', 'async programming', 'system design'],
@@ -55,7 +67,7 @@ export default function Stack() {
             </Reveal>
           ))}
 
-          <Reveal delay={0.28} className="stack-row">
+          <Reveal delay={0.32} className="stack-row">
             <div className="stack-name">Education</div>
             <div className="stack-edu">
               B.Tech, Computer Science — REVA University, Bangalore

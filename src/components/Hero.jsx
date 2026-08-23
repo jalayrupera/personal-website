@@ -13,14 +13,15 @@ export default function Hero() {
         </h1>
 
         <div className="hero-role">
-          <span>Backend Engineer</span>
+          <span>Full Stack Engineer</span>
           <span className="hot">Distributed Systems</span>
-          <span>Python</span>
+          <span>Python + TypeScript</span>
         </div>
 
         <p className="hero-thesis">
           I build and operate the asynchronous Python systems behind{' '}
-          <b>344,000</b> patient eligibility checks a week.
+          <b>344,000</b> patient eligibility checks a week — and the interfaces
+          hospital staff use to run them.
         </p>
 
         <div className="hero-actions">
