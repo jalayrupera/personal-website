@@ -55,7 +55,7 @@ main,
 }
 
 .nebula-low {
-  top: 1750px;
+  top: 120vh;
   left: -340px;
   width: 760px;
   height: 760px;
@@ -86,30 +86,34 @@ main,
 
 .section-label {
   font-family: var(--mono);
-  font-size: 11.5px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--dim);
+  color: var(--text);
   margin-bottom: 44px;
 }
 
-/* Mono technology token */
+/* Mono technology token. Plain text, not a box — a job carries ten of
+   these and a bordered pill each turns the row into visual static. */
 .tok {
   font-family: var(--mono);
   font-size: 10.5px;
   letter-spacing: 0.05em;
-  color: var(--dim);
-  border: 1px solid var(--line-lift);
-  border-radius: 2px;
-  padding: 3px 8px;
+  color: var(--faint);
   white-space: nowrap;
+}
+
+.tok:not(:last-child)::after {
+  content: '·';
+  color: var(--line-lift);
+  margin: 0 7px;
 }
 
 .stack-strip {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 3px 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -255,9 +259,6 @@ main,
   margin-left: 7px;
 }
 
-.hero-role .hot {
-  color: var(--lift);
-}
 
 .hero-thesis {
   font-size: clamp(17px, 2.2vw, 19.5px);
@@ -335,27 +336,13 @@ main,
 
 .signal {
   border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: rgba(10, 12, 21, 0.55);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-}
-
-.signal .container {
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .signal-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: var(--line);
-}
-
-.signal-cell {
-  background: var(--void);
-  padding: 30px var(--side-pad);
+  gap: 40px 32px;
+  padding: 44px 0;
 }
 
 .signal-val {
@@ -377,68 +364,6 @@ main,
   color: var(--dim);
   line-height: 1.4;
   margin-top: 10px;
-}
-
-.signal-sub {
-  font-family: var(--mono);
-  font-size: 10.5px;
-  letter-spacing: 0.04em;
-  color: var(--faint);
-  margin-top: 7px;
-}
-
-.signal-foot {
-  border-top: 1px solid var(--line);
-  background: var(--void);
-  padding: 14px var(--side-pad);
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-  color: var(--faint);
-}
-
-/* --------------------------------------------------------------------------
-   Now strip
-   -------------------------------------------------------------------------- */
-
-.now {
-  border-bottom: 1px solid var(--line);
-}
-
-.now-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 28px;
-  padding-top: 22px;
-  padding-bottom: 22px;
-}
-
-.now-copy {
-  font-size: 14.5px;
-  color: var(--dim);
-  line-height: 1.55;
-  max-width: 74ch;
-}
-
-.now-label {
-  font-family: var(--mono);
-  font-size: 10.5px;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--lift);
-  margin-right: 14px;
-}
-
-.now-tag {
-  font-family: var(--mono);
-  font-size: 10.5px;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--faint);
-  white-space: nowrap;
 }
 
 /* --------------------------------------------------------------------------
@@ -464,11 +389,15 @@ main,
   padding-top: 0;
 }
 
+.exp-rows > .exp-row:last-child {
+  padding-bottom: 0;
+}
+
 .exp-idx {
   font-family: var(--mono);
   font-size: 12px;
   letter-spacing: 0.06em;
-  color: var(--signal);
+  color: var(--faint);
   padding-top: 6px;
 }
 
@@ -482,14 +411,6 @@ main,
   line-height: 1.55;
 }
 
-.exp-where {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  color: var(--faint);
-  margin-top: 8px;
-}
-
 .exp-co {
   display: flex;
   align-items: center;
@@ -498,22 +419,10 @@ main,
 }
 
 .exp-name {
-  font-size: clamp(21px, 3vw, 26px);
+  font-size: clamp(19px, 2.4vw, 22px);
   font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.15;
-}
-
-.chip {
-  font-family: var(--mono);
-  font-size: 9.5px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--lift);
-  border: 1px solid var(--signal);
-  border-radius: 2px;
-  padding: 3px 8px;
-  white-space: nowrap;
 }
 
 .exp-pos {
@@ -567,68 +476,6 @@ main,
 }
 
 /* --------------------------------------------------------------------------
-   Selected work
-   -------------------------------------------------------------------------- */
-
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 16px;
-}
-
-.work-card {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  background: rgba(10, 12, 21, 0.6);
-  border: 1px solid var(--line);
-  border-radius: 5px;
-  padding: 26px 24px;
-  transition: border-color 0.2s ease, transform 0.2s ease;
-}
-
-.work-card:hover {
-  border-color: rgba(236, 48, 19, 0.45);
-  transform: translateY(-2px);
-}
-
-.work-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 12px;
-  font-family: var(--mono);
-  font-size: 10.5px;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-}
-
-.work-entity {
-  color: var(--faint);
-}
-
-.work-metric {
-  color: var(--lift);
-  white-space: nowrap;
-  font-variant-numeric: tabular-nums;
-}
-
-.work-title {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: -0.015em;
-  line-height: 1.3;
-  text-wrap: balance;
-}
-
-.work-desc {
-  font-size: 14px;
-  line-height: 1.62;
-  color: var(--dim);
-  flex: 1;
-}
-
-/* --------------------------------------------------------------------------
    Stack
    -------------------------------------------------------------------------- */
 
@@ -639,8 +486,8 @@ main,
 
 .stack-row {
   display: grid;
-  grid-template-columns: 190px 1fr;
-  gap: 26px;
+  grid-template-columns: 232px 1fr;
+  gap: 28px;
   padding: 15px 0;
   border-top: 1px solid var(--line);
 }
@@ -655,7 +502,7 @@ main,
   font-size: 11px;
   letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: var(--dim);
+  color: var(--faint);
   padding-top: 4px;
 }
 
@@ -670,6 +517,9 @@ main,
   flex-wrap: wrap;
   align-items: baseline;
   gap: 14px;
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+  margin-top: 26px;
   font-size: 14px;
   color: var(--dim);
 }
@@ -687,7 +537,7 @@ main,
 
 .contact {
   border-top: 1px solid var(--line);
-  padding-top: 92px;
+  padding-top: 88px;
   padding-bottom: 44px;
 }
 
@@ -792,10 +642,6 @@ main,
     display: none;
   }
 
-  .exp-where {
-    margin-top: 0;
-  }
-
   .exp-main {
     grid-column: 2;
   }
@@ -805,20 +651,14 @@ main,
   }
 
   .stack-row {
-    grid-template-columns: 160px 1fr;
-    gap: 18px;
+    grid-template-columns: 180px 1fr;
+    gap: 20px;
   }
 }
 
 @media (max-width: 720px) {
   .nav-links {
     display: none;
-  }
-
-  .now-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
   }
 }
 
@@ -876,7 +716,6 @@ main,
 
   /* Beats framer-motion's inline opacity/transform on unrevealed sections. */
   .exp-row,
-  .work-card,
   .stack-row {
     opacity: 1 !important;
     transform: none !important;
@@ -889,7 +728,6 @@ main,
 
   .hero-name,
   .exp-name,
-  .work-title,
   .contact-headline,
   .signal-val,
   .exp-bullets b,
@@ -900,8 +738,6 @@ main,
   .hero-thesis,
   .exp-pos,
   .exp-bullets li,
-  .work-desc,
-  .now-copy,
   .signal-label,
   .stack-edu,
   .contact-copy {
@@ -910,14 +746,9 @@ main,
 
   .hero-kicker,
   .hero-role,
-  .work-note,
   .section-label,
   .exp-when,
-  .exp-where,
   .exp-summary,
-  .signal-sub,
-  .signal-foot,
-  .now-tag,
   .tok,
   .stack-name,
   .contact-links a,
@@ -925,29 +756,14 @@ main,
     color: #555 !important;
   }
 
-  .signal,
-  .signal-cell,
-  .signal-foot,
-  .work-card {
-    background: transparent !important;
-  }
-
-  .signal-grid {
-    background: transparent !important;
-    gap: 0;
-  }
-
   .exp-row,
-  .work-card,
   .signal,
   .section-rule,
-  .contact,
-  .now {
+  .contact {
     border-color: #ccc !important;
   }
 
-  .exp-row,
-  .work-card {
+  .exp-row {
     break-inside: avoid;
   }
 
@@ -963,22 +779,21 @@ main,
   }
 }
 
-/* Footnote under the work grid: this site is itself the frontend sample. */
-.work-note {
-  margin-top: 24px;
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.05em;
+/* Colophon on the footer rule: this site is itself the frontend sample.
+   Sentence case, against the uppercase mono the rest of the rule uses. */
+.contact-colophon {
+  text-transform: none;
+  letter-spacing: 0.02em;
   color: var(--faint);
 }
 
-.work-note a {
+.contact-colophon a {
   color: var(--dim);
   border-bottom: 1px solid var(--line-lift);
   padding-bottom: 1px;
 }
 
-.work-note a:hover {
-  color: var(--lift);
-  border-bottom-color: var(--signal);
+.contact-colophon a:hover {
+  color: var(--text);
+  border-bottom-color: var(--faint);
 }
