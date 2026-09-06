@@ -1,4 +1,4 @@
-import { EMAIL, GITHUB_URL, LINKEDIN_URL, RESUME_FILE } from '../data/profile';
+import { EMAIL, RESUME_FILE } from '../data/profile';
 
 export default function Hero() {
   return (
@@ -14,7 +14,7 @@ export default function Hero() {
 
         <div className="hero-role">
           <span>Full Stack Engineer</span>
-          <span className="hot">Distributed Systems</span>
+          <span>Distributed Systems</span>
           <span>Python + TypeScript</span>
         </div>
 
@@ -33,14 +33,6 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="hero-social">
-          <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
-            GitHub ↗
-          </a>
-          <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
-            LinkedIn ↗
-          </a>
-        </div>
       </div>
     </header>
   );

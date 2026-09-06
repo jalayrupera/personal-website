@@ -5,6 +5,7 @@ import {
   PHONE_DISPLAY,
   PHONE_HREF,
   RESUME_FILE,
+  SITE_REPO_URL,
 } from '../data/profile';
 
 export default function Contact() {
@@ -38,7 +39,12 @@ export default function Contact() {
 
         <div className="contact-foot">
           <span>© 2026 Jalay Rupera</span>
-          <span>Bangalore, India · UTC+5:30</span>
+          <span className="contact-colophon">
+            React and Vite, with the galaxy hand-written on a canvas.{' '}
+            <a href={SITE_REPO_URL} target="_blank" rel="noopener noreferrer">
+              Source ↗
+            </a>
+          </span>
         </div>
       </div>
     </footer>

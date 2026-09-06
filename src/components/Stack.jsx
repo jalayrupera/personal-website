@@ -1,49 +1,29 @@
 import Reveal from './Reveal';
 
+/* Four rows, not eight. Every tool that already appears in a role's tag
+   row is dropped here — this section carries only what the roles above
+   it cannot say on their own. */
 const groups = [
-  { name: 'Languages', items: ['python', 'typescript', 'javascript', 'sql', 'bash'] },
-  {
-    name: 'Backend',
-    items: ['fastapi', 'rest api design', 'microservices', 'async programming', 'system design'],
-  },
+  { name: 'Languages', items: ['python', 'typescript', 'javascript', 'sql'] },
   {
     name: 'Distributed systems',
     items: [
-      'celery',
-      'rabbitmq',
-      'redis',
       'message queues',
       'task scheduling',
       'caching',
       'horizontal scaling',
+      'async programming',
+      'system design',
     ],
   },
-  { name: 'Data', items: ['mongodb', 'redis', 'schema design', 'data modeling'] },
   {
     name: 'Infrastructure',
-    items: ['docker', 'kubernetes', 'k3s', 'azure', 'aws', 'ci/cd', 'linux', 'observability'],
-  },
-  {
-    name: 'Frontend',
-    items: [
-      'react',
-      'tailwind',
-      'chrome extensions',
-      'manifest v3',
-      'html/css',
-      'responsive ui',
-    ],
+    items: ['kubernetes', 'docker', 'azure', 'aws', 'ci/cd', 'observability'],
   },
   {
     name: 'AI / LLM',
-    items: [
-      'azure openai',
-      'llm orchestration',
-      'structured extraction',
-      'prompt engineering',
-    ],
+    items: ['azure openai', 'llm orchestration', 'structured extraction', 'prompt engineering'],
   },
-  { name: 'Tools', items: ['playwright', 'git', 'ros2', 'mqtt'] },
 ];
 
 export default function Stack() {
@@ -65,15 +45,14 @@ export default function Stack() {
               </div>
             </Reveal>
           ))}
-
-          <Reveal delay={0.32} className="stack-row">
-            <div className="stack-name">Education</div>
-            <div className="stack-edu">
-              B.Tech, Computer Science — REVA University, Bangalore
-              <span className="stack-edu-years">2017 – 2021</span>
-            </div>
-          </Reveal>
         </div>
+
+        {/* Not a stack row — it sat inside the table as a sans-serif
+            stowaway among mono tags. */}
+        <Reveal delay={0.2} as="p" className="stack-edu">
+          B.Tech, Computer Science — REVA University, Bangalore
+          <span className="stack-edu-years">2017 – 2021</span>
+        </Reveal>
       </div>
     </section>
   );
