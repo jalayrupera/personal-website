@@ -269,9 +269,12 @@ main,
 }
 
 .hero-thesis b {
-  color: var(--text);
+  font-family: var(--mono);
+  font-size: 0.95em;
   font-weight: 600;
+  color: var(--text);
   font-variant-numeric: tabular-nums;
+  margin-right: 0.08em;
 }
 
 .hero-actions {
@@ -465,10 +468,17 @@ main,
   background: var(--faint);
 }
 
+/* The number is the claim; the sentence around it is context. Mono and a
+   step up in size, so a scan catches 95%+ and 10K+ before it catches the
+   company names sitting above them. */
 .exp-bullets b {
-  color: var(--text);
+  font-family: var(--mono);
+  font-size: 1.3em;
   font-weight: 600;
+  color: var(--text);
   font-variant-numeric: tabular-nums;
+  /* Mono side-bearings are tight; the following word needs the room. */
+  margin-right: 0.14em;
 }
 
 .exp-main > .stack-strip {

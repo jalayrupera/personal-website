@@ -9,10 +9,10 @@ const jobs = [
     summary:
       'Healthcare technology company automating insurance eligibility verification across the UAE.',
     bullets: [
-      'Rebuilt the core insurance eligibility pipeline for throughput — Celery queue partitioning, Redis caching, and worker concurrency tuning.',
-      'Design and operate LLM transformation workflows on Azure OpenAI that convert unstructured HTML into structured JSON at <b>95%+ accuracy</b>, powering real-time verification.',
-      'Build automated data-retrieval pipelines in Python and Playwright against hospital portals and payer systems, cutting manual patient-data lookup time by <b>80%</b>.',
-      'Ship and maintain the production Chrome extension used at hospital front desks — TypeScript on Manifest V3, injecting Emirates ID, Member ID, and DHA ID verification into hospital information systems for automated form filling and document upload — reducing user-reported issues by <b>90%</b>.',
+      'Rebuilt the core insurance eligibility pipeline — Celery queue partitioning, Redis caching, and worker concurrency tuning.',
+      'Design and operate LLM transformation workflows on Azure OpenAI, converting unstructured HTML into structured JSON for real-time verification&nbsp;—&nbsp;<b>95%+</b>&nbsp;accuracy.',
+      'Build automated data-retrieval pipelines in Python and Playwright against hospital portals and payer systems&nbsp;—&nbsp;<b>80%</b>&nbsp;less manual patient-data lookup.',
+      'Ship and maintain the production Chrome extension used at hospital front desks: TypeScript on Manifest V3, injecting Emirates ID, Member ID, and DHA ID verification into hospital information systems for automated form filling and document upload&nbsp;—&nbsp;<b>90%</b>&nbsp;fewer user-reported issues.',
       'Partner with the CTO on backend architecture, reliability, and observability for the core product.',
     ],
     stack: [
@@ -49,10 +49,10 @@ const jobs = [
     dates: ['May 2022 —', 'Sep 2023'],
     summary: 'B2B SaaS company building engagement and gamification platforms.',
     bullets: [
-      'Led the backend for Stock Wars, a real-time virtual stock-trading platform serving <b>10K+ concurrent users</b>, using Redis caching and message queues to hold latency stable under peak load.',
+      'Led the backend for Stock Wars, a real-time virtual stock-trading platform, using Redis caching and message queues to hold latency stable under peak load&nbsp;—&nbsp;<b>10K+</b>&nbsp;concurrent users.',
       'Built production REST APIs and microservices in Python (FastAPI) with MongoDB, designed for latency-critical trading workflows.',
       'Integrated Celery, Redis, and RabbitMQ for asynchronous job scheduling and background task execution.',
-      'Deployed services on Docker and Kubernetes, improving deployment speed and reliability by <b>40%</b>.',
+      'Deployed services on Docker and Kubernetes&nbsp;—&nbsp;<b>40%</b>&nbsp;faster, more reliable releases.',
     ],
     stack: ['python', 'fastapi', 'mongodb', 'celery', 'redis', 'rabbitmq', 'docker', 'kubernetes'],
   },
